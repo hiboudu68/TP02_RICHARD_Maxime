@@ -1,0 +1,55 @@
+<form action="" method="get" class="compte">
+    <div class="compte">
+        <label for="name">Entrer Nom: </label>
+        <input id="name" type="text" name="name" [(ngModel)]="nom">
+    </div>
+    <div class="compte">
+        <label for="prenom">Entrer Prenom: </label>
+        <input type="text" id="prenom" name="prenom" [(ngModel)]="prenom" />
+    </div>
+    <div class="compte">
+      <label for="adress">Entrer Adresse: </label>
+      <input type="text" name="adress" id="adress" [(ngModel)]="address" />
+    </div>
+    <div class="compte">
+        <label for="cp">Entrer Code Postal: </label>
+        <input type="text" name="cp" id="cp" [(ngModel)]="codePostal" />
+    </div>
+    <div class="compte">
+        <label for="ville">Entrer Ville: </label>
+        <input type="text" name="txt" id="txt" [(ngModel)]="ville" />
+    </div>
+    <div class="compte">
+        <label for="tel">Entrer Tel: </label>
+        <input type="tel" name="tel" id="tel" [(ngModel)]="tel" />
+    </div>
+    <div class="compte">
+        <label for="email">Entrer Email: </label>
+        <input type="email" name="email" id="email" [(ngModel)]="email" />
+    </div>
+    <div class="compte">
+        <label for="civile">Entrer Civilité: </label>
+        <input type="text" name="civile" id="civile" [(ngModel)]="civilite" />
+    </div>
+    <div class="compte">
+        <label for="pass">Entrer Mot de Passe: </label>
+        <input type="password" name="pass" id="pass" [(ngModel)]="mdp" />
+    </div>
+    <div class="compte">
+        <label for="confirme">Confirmer: </label>
+        <input type="password" name="confirme" id="confirme" [(ngModel)]="confMdp"/>
+    </div>
+    <div class="compte">
+        <label for="log">Entrer Login: </label>
+        <input type="text" name="log" id="log" [(ngModel)]="login"/>
+    </div>
+    <div class="compte">
+      <input type="submit" (click)="valid()" value="Connexion!" />
+    </div>
+</form>
+
+<div style="color: red;">
+    <p>{{errorTxt}}</p>
+</div>
+
+<app-display-answer-form *ngIf="IsDiplay" [nom]="nom" [prenom]="prenom" [address]="address" [civilite]="civilite" [codePostal]="codePostal" [ville]="ville" [tel]="tel" [email]="email" [mdp]="mdp" [login]="login"> </app-display-answer-form>
